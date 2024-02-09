@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import ApplicationWrapper from './components/templates/ApplicationWrapper'
+import { Container } from "@chakra-ui/react"
+import Router from './components/routes'
+import { Routes } from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container
+    maxW={['container.sm', 'container.md', 'container.lg']}
+    p="0"
+    mx="auto"
+    minHeight={"100vh"}>
+      <ApplicationWrapper>
+        <Router />
+      </ApplicationWrapper>
+    </Container>
+  )
 }
 
-export default App;
+export default App
